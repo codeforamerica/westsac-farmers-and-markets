@@ -12,6 +12,7 @@
   ])
     .config(config)
     .run(run)
+    .controller('MarketsController', MarketsController)
   ;
 
   config.$inject = ['$urlRouterProvider', '$locationProvider'];
@@ -29,6 +30,12 @@
 
   function run() {
     FastClick.attach(document.body);
+  }
+
+  MarketsController.$inject = ['$scope', '$controller'];
+
+  function MarketsController($scope, $controller){
+      $scope.hola = "hola mundo";
   }
 
 })();

@@ -27,7 +27,7 @@ $ npm install -g foundation-cli bower gulp
 Clone this repository, where `app` is the name of your app.
 
 ```bash
-git clone https://github.com/zurb/foundation-apps-template.git app
+git clone https://github.com/codeforamerica/westsac-farmers-and-markets.git 
 ```
 
 Change into the directory.
