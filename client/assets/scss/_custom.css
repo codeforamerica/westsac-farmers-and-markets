@@ -1,0 +1,71 @@
+/*Market Page Styles Code*/
+.market-page .header {
+  text-align: center;
+  background-color: WhiteSmoke;
+  padding: 50px;
+}
+.market-page .header img{
+  width: 250px;
+}
+.market-page .info {
+  background-color: white;
+}
+.market-page .info ul {
+  padding: 30px;
+}
+.market-page .description {
+  width: 56%;
+  margin: 0 auto;
+}
+.market-page .farmers {
+  text-align: center;
+  background-color: WhiteSmoke;
+}
+.market-page .farmers ul {
+  list-style-type: none;
+  padding: 75px;
+  width: 900px;
+}
+.market-page .farmers ul > li {
+  display: inline;
+  margin: 20px;
+}
+.market-page .farmers ul > li > img{
+  border-radius: 100%;
+}
+
+
+/*Farmer Page Style Code */
+.farmer-page .products {
+  width: 100%;
+  background-color: #ccc;
+}
+.farmer-page .info .container{
+  width: 70%;
+  margin: 0 auto;
+  height: 220px;
+}
+.farmer-page .info .text-info{
+  width: 70%;
+  position: relative;
+  float: right;
+  padding: 10px;
+  margin-top: 25px;
+}
+.farmer-page .info .text-info p {
+  line-height: 22px;
+}
+.farmer-page .info .farm-img{
+  width: 25%;
+  position: relative;
+  float: left;
+  text-align: right;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.farmer-page .info .farm-img img {
+  width: 200px;
+  padding: 20px;
+  border-radius: 100%;
+  margin: 0 auto;
+}

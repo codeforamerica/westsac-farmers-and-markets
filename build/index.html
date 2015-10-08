@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markets</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+
+    <div class="menu-group primary">
+      <div class="menu-group-left">
+      <ul class="menu-bar primary">
+        <li ui-sref-active="is-active"><a ui-sref="markets">Markets</a></li>
+      </ul>
+      </div>
+    </div>
+
+    <div ui-view></div>
+
+    <zf-notification-static id="trail-notify" title="New Trail" position="bottom-left">
+      <p>We have added your awesome trail to our list.</p>
+    </zf-notification-static>
+
+  </body>
+</html>
