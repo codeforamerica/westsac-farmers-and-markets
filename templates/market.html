@@ -1,13 +1,14 @@
-<div class="market-page">
+<div class="market-page" >
   <div class="grid-block header">
     <div class="grid-container">
       <img src="http://www.cityilights.org/wp-content/uploads/2015/05/ws-farmersmarket3.jpg" alt="" />
-      <h2>West Sacramento Farmer's Market</h2>
+      
+      <h2>{{ markets[id - 1].name }}</h2>
       <p class="description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        {{ markets[id - 1].description }}
       </p>
       <p>
-        <i class="fa fa-map-marker"></i> 123 Main Street, West Sacramento
+        <i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}
       </p>
     </div>
   </div>
@@ -15,12 +16,12 @@
   <div class="grid-block info">
     <div class="grid-container">
       <ul class="info-list">
-        <li><i class="fa fa-clock-o"></i> Open Tuesdays and Thursdays, 3:00pm - 7:00pm</li>
-        <li><i class="fa fa-check"></i> Credit Cards Accepted</li>
-        <li><i class="fa fa-check"></i> EBT Cards Accepted</li>
-        <li><i class="fa fa-phone"></i> 916-471-9072</li>
-        <li><i class="fa fa-envelope-o"></i> denise@westsacramentofarmersmarket.com</li>
-        <li><i class="fa fa-link"></i> http://www.westsacramentochamber.com</li>
+        <li><i class="fa fa-clock-o"></i> {{ markets[id - 1].opentimes }}</li>
+        <li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
+        <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>
+        <li><i class="fa fa-phone"></i> {{ markets[id - 1].phone }} </li>
+        <li><i class="fa fa-envelope-o"></i> {{ markets[id - 1].phone }} </li>
+        <li><i class="fa fa-link"></i> {{ markets[id - 1].email }} </li>
       </ul>
     </div>
   </div>

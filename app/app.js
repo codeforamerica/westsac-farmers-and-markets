@@ -5,21 +5,28 @@ angular.module('marketsApp', ['ui.router'])
       url: '/home',
       templateUrl: 'templates/home.html',
       controller: 'MarketsController'
-    }).state('about', {
+    })
+    .state('about', {
       url: '/about',
-      templateUrl: 'templates/about.html'
-    }).state('market', {
-      url: '/market',
+      templateUrl: 'templates/about.html',
+      controller: 'MarketsController'
+    })
+    .state('market', {
+      url: '/market/{marketID:int}',
+      controller: 'MarketsController',
       templateUrl: 'templates/market.html'
-    }).state('farmer', {
+    })
+    .state('farmer', {
       url: '/farmer',
       templateUrl: 'templates/farmer.html'
     });
 
   $urlRouterProvider.otherwise('/home');
 })
-.controller('MarketsController', ['$scope', 'SheetItems',
-  function ($scope, SheetItems) {
+.controller('MarketsController', ['$scope', 'SheetItems', '$stateParams',
+  function ($scope, SheetItems, $stateParams) {
+
+    $scope.id = $stateParams.marketID;
 
     SheetItems.query(function(data) {
       //data processing can happen here

@@ -12,7 +12,7 @@
 
     <div class="grid-block">
       <div class="grid-content medium-4" ng-repeat="market in markets">
-        <div class="card" ui-sref="market">
+        <div class="card" ui-sref="market({ marketID: market.id})">
           <img src="http://placehold.it/433x215">
           
           <div class="card-divider">
