@@ -1,4 +1,4 @@
-angular.module('marketsApp', ['ui.router'])
+angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
@@ -55,4 +55,14 @@ angular.module('marketsApp', ['ui.router'])
     };
   }]);
 
-// https://docs.google.com/spreadsheets/d/1kjoos8G2ON6hnkskgEg5RL95PQk-kPNNq7MB2N0NyfI/pubhtml
+angular.extend($scope, {
+    defaults: {
+        tileLayer: 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
+        maxZoom: 14,
+        path: {
+            weight: 10,
+            color: '#800000',
+            opacity: 1
+        }
+    }
+});
