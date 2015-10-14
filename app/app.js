@@ -57,7 +57,7 @@ angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
     return {
       query: function(callback) {
         Tabletop.init({
-          key: 'https://docs.google.com/spreadsheets/d/1kjoos8G2ON6hnkskgEg5RL95PQk-kPNNq7MB2N0NyfI/pubhtml}',
+          key: 'https://docs.google.com/spreadsheets/d/1kjoos8G2ON6hnkskgEg5RL95PQk-kPNNq7MB2N0NyfI/pubhtml',
           simpleSheet: true,
           parseNumbers: true,
           callback: function(data, tabletop) {
