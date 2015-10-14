@@ -23,14 +23,31 @@ angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
 
   $urlRouterProvider.otherwise('/home');
 })
-.controller('MarketsController', ['$scope', 'SheetItems', '$stateParams',
+.controller('MarketsController', ['$scope', 'SheetItems', '$stateParams', 'leafletData',
   function ($scope, SheetItems, $stateParams) {
 
     $scope.id = $stateParams.marketID;
 
+    angular.extend($scope, {
+                westsac: {
+                    lat: 38.58031,  
+                    lng: -121.53016,
+                    zoom: 13
+                }
+    });
+
     SheetItems.query(function(data) {
       //data processing can happen here
-      $scope.markets = data;    
+      $scope.markets = data;   
+
+          // add marker
+      $scope.markers = new Array();
+      for(i=0; i<data.length; ++i){
+        $scope.markers.push({
+          lat: data[i].latitude,
+          lng: data[i].longitude
+        });
+      } 
   	});
 
   }
@@ -55,14 +72,13 @@ angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
     };
   }]);
 
-angular.extend($scope, {
-    defaults: {
-        tileLayer: 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
-        maxZoom: 14,
-        path: {
-            weight: 10,
-            color: '#800000',
-            opacity: 1
-        }
-    }
-});
+
+
+
+
+
+
+
+
+
+

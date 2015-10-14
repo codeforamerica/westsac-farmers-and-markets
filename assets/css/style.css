@@ -70,6 +70,10 @@
   margin: 0 auto;
 }
 
+/*card style code*/
+.card p {
+  font-size: 0.9em;
+}
 
 
 /*map styles*/
