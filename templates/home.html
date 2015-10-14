@@ -16,13 +16,13 @@
         <div class="card" ui-sref="market({ marketID: market.id})">
           <!-- <img src="http://placehold.it/433x215"> -->
           
-          <div class="card-divider">
-            {{market.title}}
-          </div>
+          <!--<div class="card-divider">
+          </div>-->
         
           <div class="card-section">
-            <p>{{market.address}}</p>
-            <p>{{market.opentimes}}</p>
+            <p><strong>{{market.title}}</strong></p>
+            <p><i class="fa fa-map-marker"></i> {{market.address}}</p>
+            <p><i class="fa fa-clock-o"></i> {{market.opentimes}}</p>
           </div>
         
         </div>
