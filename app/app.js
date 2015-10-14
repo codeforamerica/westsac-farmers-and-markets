@@ -16,6 +16,11 @@ angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
       controller: 'MarketsController',
       templateUrl: 'templates/market.html'
     })
+    .state('add-market', {
+      url: '/add-market',
+      controller: 'MarketsController',
+      templateUrl: 'templates/add_market.html'
+    })
     .state('farmer', {
       url: '/farmer',
       templateUrl: 'templates/farmer.html'
