@@ -1,4 +1,4 @@
-angular.module('marketsApp', ['ui.router','nemLogging','leaflet-directive'])
+angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-directive'])
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
