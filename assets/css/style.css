@@ -1,17 +1,17 @@
 /*Market Page Styles Code*/
-body {font-family: Georgia;}
-h1, h2, h3, h4, h5, h6 {font-family: 'Playfair Display', serif; font-weight: bold;}
+body {
+  font-family: 'Lato', sans-serif;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;}
+
 .menu-group.primary, .menu-group.primary .menu-bar {
-    background-color: rgb(51, 51, 51);
-}
+  background-color: rgb(51, 51, 51);}
 
+.market-page .about {
+  background-color: WhiteSmoke;}
 
-
-.market-page .header {
-  text-align: center;
-  background-color: WhiteSmoke;
-  padding: 50px;
-}
 .market-page .header img{
   width: 250px;
 }

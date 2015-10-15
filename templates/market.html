@@ -1,40 +1,48 @@
-<div class="market-page" >
-  <div class="grid-block header">
-    <div class="grid-container">
-      <img src="http://www.cityilights.org/wp-content/uploads/2015/05/ws-farmersmarket3.jpg" alt="" />
+<div class="market-page" >  
+
+<div class="grid-block">  
+  <div class="grid-content header">
+    <div class="medium-9 columns">
       <h2>{{ markets[id - 1].title }}</h2>
-      <p class="description">
-        {{ markets[id - 1].description }}
-      </p>
+      <p><i class="fa fa-clock-o"></i> Open {{ markets[id - 1].opentimes }}</p>
     </div>
+
+    <div class="medium-3 columns">
+      <a href="#" class="button expand">Subscribe</a>
+    </div>
+  </div>
+</div>
+  
+  
+<div class="grid-block">    
+  <div class="grid-container about">
+    <div class="medium-8 columns">
+      <h3>About this farm</h3>
+
+      <p>{{ markets[id - 1].description }}</p>
+
+      <ul class="info-list">
+          <li><i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}</li>
+          <li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
+          <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>
+          <li><i class="fa fa-phone"></i> {{ markets[id - 1].phone }} </li>
+          <li><i class="fa fa-envelope-o"></i> <a href="mailto:{{ markets[id - 1].email }}">{{ markets[id - 1].email }}</a></li>
+          <li><i class="fa fa-link"></i> <a href="{{ markets[id - 1].website }}">{{ markets[id - 1].website }}</a></li>
+        </ul>
+    </div>
+  </div>
+</div>  
+
+  <div class="row grid-block farmers">
+    <div class="grid-container">
+        <ul class="farmer-list">
+          <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
+          <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
+          <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
+          <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
+          <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
+        </ul>
+      </div>
   </div>
   
-
-  <div class="grid-block info">
-    <div class="grid-container">
-      <ul class="info-list">
-        <li><i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}</li>
-        <li><i class="fa fa-clock-o"></i> {{ markets[id - 1].opentimes }}</li>
-        <li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
-        <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>
-        <li><i class="fa fa-phone"></i> {{ markets[id - 1].phone }} </li>
-        <li><i class="fa fa-envelope-o"></i> <a href="mailto:{{ markets[id - 1].email }}">{{ markets[id - 1].email }}</a></li>
-        <li><i class="fa fa-link"></i> <a href="{{ markets[id - 1].website }}">{{ markets[id - 1].website }}</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="grid-block farmers">
-    <div class="grid-container">
-      <ul class="farmer-list">
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-      </ul>
-    </div>
-  </div>
-
-
 </div>
