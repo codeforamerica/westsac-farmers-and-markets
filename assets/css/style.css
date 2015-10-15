@@ -1,4 +1,12 @@
 /*Market Page Styles Code*/
+body {font-family: Georgia;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Playfair Display', serif; font-weight: bold;}
+.menu-group.primary, .menu-group.primary .menu-bar {
+    background-color: rgb(51, 51, 51);
+}
+
+
+
 .market-page .header {
   text-align: center;
   background-color: WhiteSmoke;
@@ -15,6 +23,7 @@
 }
 .market-page .description {
   width: 56%;
+  font-size: 15px;
   margin: 0 auto;
 }
 .market-page .farmers {
@@ -72,8 +81,16 @@
 
 /*card style code*/
 .card p {
-  font-size: 0.9em;
-}
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;}
+
+.card p i.fa{
+  width: 14px;}
+
+.card {
+      border: 0px solid #ededed;
+    background: rgb(250,250,250);}
 
 
 /*map styles*/

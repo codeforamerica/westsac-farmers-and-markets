@@ -2,20 +2,18 @@
   <div class="grid-block header">
     <div class="grid-container">
       <img src="http://www.cityilights.org/wp-content/uploads/2015/05/ws-farmersmarket3.jpg" alt="" />
-      
       <h2>{{ markets[id - 1].title }}</h2>
       <p class="description">
         {{ markets[id - 1].description }}
       </p>
-      <p>
-        <i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}
-      </p>
     </div>
   </div>
+  
 
   <div class="grid-block info">
     <div class="grid-container">
       <ul class="info-list">
+        <li><i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}</li>
         <li><i class="fa fa-clock-o"></i> {{ markets[id - 1].opentimes }}</li>
         <li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
         <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>
