@@ -1,22 +1,35 @@
-<div class="container market-detail">
-  <h2>{{ markets[id - 1].title }}</h2>
-  <p><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Open {{ markets[id - 1].opentimes }}</p>
+<div class="container result-header">
+  <div class="row">
+      <div class="col-md-8">
+        <h2>{{ markets[id - 1].title }}</h2>
+        <p><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Open {{ markets[id - 1].opentimes }}</p>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+      </div>
 </div>
+  </div>
 
-<div class="container-fluid about">
+<div class="container-fluid result-about">
   <div class="container">
-  <h3>About this farm</h3>
-  <p>
-    {{ markets[id - 1].description }}
-  </p>
-  <ul>
-        <li><i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}</li>
-        <li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
-        <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>
-        <li><i class="fa fa-phone"></i> {{ markets[id - 1].phone }} </li>
-        <li><i class="fa fa-envelope-o"></i> {{ markets[id - 1].phone }} </li>
-        <li><i class="fa fa-link"></i> {{ markets[id - 1].email }} </li>
-      </ul>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <h3>About this farm</h3>
+          <p>
+            {{ markets[id - 1].description }}
+          </p>
+          <ul>
+                <li><i class="fa fa-map-marker"></i> {{ markets[id - 1].address }} {{ markets[id - 1].city }}</li>
+                <!--<li><i class="fa fa-check"></i> {{ markets[id - 1].ccard }} </li>
+                <li><i class="fa fa-check"></i> {{ markets[id - 1].ebtcard }}</li>-->
+                <li><i class="fa fa-phone"></i> {{ markets[id - 1].phone }} </li>
+                <li><i class="fa fa-envelope-o"></i> {{ markets[id - 1].email }} </li>
+                <li><i class="fa fa-link"></i> <a href="{{ markets[id - 1].website }}">{{ markets[id - 1].website }}</a> </li>
+              </ul>
+      </div>
+    </div>
+  
     </div>
 </div>
 
