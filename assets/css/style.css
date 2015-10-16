@@ -1,7 +1,96 @@
-
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 /*form style code */
 form {
   width: 100%;
 }
+
+/* Natasha's Styles */
+body {font-family: 'Lora', serif;}
+
+@media (min-width: 1200px){
+  .container {
+    width: 970px;
+  }
+}
+
+.map-container {
+  border: 1px solid #ccc;}
+
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;}
+
+.search-results li {
+  margin: 0;
+  padding: 10px 0 15px 0;
+  border-bottom: 1px solid #e5e5e1;}
+
+.search-results>li:first-child {
+  border-top: 1px solid #e5e5e1;
+  padding-top: 15px;}
+
+.search-result-title {
+  font-size: 16px;
+  color: rgb(42, 138, 234);
+  cursor: pointer;
+  margin-top: 10px;}
+
+.search-result-title span:hover {
+  text-decoration: underline;}
+
+.search-result-detail {
+  font-size: 13px;
+  margin-bottom: 5px;}
+
+.search-result-detail .glyphicon {
+  color: #999;
+  width: 15px;}
+
+.top-shelf {
+  background: #f5f5f1;
+  border-bottom: 1px solid #ccccc8;
+  padding-bottom: 30px;
+  margin-bottom: 15px;}
+
+.top-shelf h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+  margin-top: 25px;} 
+
+.top-shelf h4{
+  font-size: 14px;
+  margin-bottom: 7px;}
+
+.filter {
+  /*padding: 16px 43px;*/
+  background-color: #fafafa;
+  font-size: 14px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-weight: bold;}
+
+.navbar-brand .location {
+  color: #ccc;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: normal;}
+
+.footer {
+  background: #f5f5f1;
+  border-top: 1px solid #ccccc8;
+  padding: 25px 0 20px 0;
+  margin-top: 15px;
+  text-align:center;
+}
+
+.about{
+  border-top: 1px solid #ccccc8;
+  background-color: #f5f5f1;}
