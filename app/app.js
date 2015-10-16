@@ -21,6 +21,11 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
       controller: 'FormController',
       templateUrl: 'templates/add_market.html'
     })
+    .state('thanks', {
+      url: '/thanks',
+      controller: 'FormController',
+      templateUrl: 'templates/thanks.html'
+    })
     .state('farmer', {
       url: '/farmer',
       templateUrl: 'templates/farmer.html'
