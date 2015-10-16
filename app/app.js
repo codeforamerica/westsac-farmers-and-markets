@@ -18,7 +18,7 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
     })
     .state('add-market', {
       url: '/add-market',
-      controller: 'MarketsController',
+      controller: 'FormController',
       templateUrl: 'templates/add_market.html'
     })
     .state('farmer', {
@@ -56,8 +56,41 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
   	});
 
   }
+])
+.controller('FormController', ['$scope', 'leafletData',
+  function ($scope, $stateParams, leafletData) {
 
-]).factory('SheetItems', ['$rootScope',
+    $scope.hola = "homa mundo";
+
+    angular.extend($scope, {
+                westsac: {
+                    lat: 38.58031,  
+                    lng: -121.53016,
+                    zoom: 13
+                },
+                events: {}
+    });
+
+    $scope.markers = new Array();
+
+    $scope.$on("leafletDirectiveMap.click", function(event, args){
+          
+          if ($scope.markers.length> 0) {
+            $scope.markers = new Array();
+          };
+
+          var leafEvent = args.leafletEvent;
+          $scope.markers.push({
+             lat: leafEvent.latlng.lat,
+             lng: leafEvent.latlng.lng,
+             message: "My Added Marker"
+              });
+          $scope.latitude = leafEvent.latlng.lat;
+          $scope.longitude = leafEvent.latlng.lng;
+      });
+  }
+])
+.factory('SheetItems', ['$rootScope',
   function($rootScope){
     return {
       query: function(callback) {
