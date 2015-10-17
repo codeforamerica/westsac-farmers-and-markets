@@ -5,3 +5,7 @@
 form {
   width: 100%;
 }
+
+#tab-container {
+    overflow:hidden;
+}
