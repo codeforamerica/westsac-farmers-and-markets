@@ -32,13 +32,10 @@
   
     </div>
 </div>
+       
+<ul>
+  <li ng-repeat="farmer in markets[id - 1].farmers.split(',')">{{farmer}}</li>
+</ul>
 
-      
-
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-        <li><a ui-sref="farmer"><img src="http://placehold.it/100x100" alt=""/></a></li>
-      </ul>
-
+<h2>data of farmers from api </h2>
+{{farmers}}

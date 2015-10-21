@@ -13,7 +13,7 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
     })
     .state('market', {
       url: '/market/{marketID:int}',
-      controller: 'MarketsController',
+      controller: 'MarketController',
       templateUrl: 'templates/market.html'
     })
     .state('add-market', {
@@ -34,9 +34,16 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
   $urlRouterProvider.otherwise('/home');
 })
 .controller('MarketsController', ['$scope', 'SheetItems', '$stateParams', 'leafletData',
-  function ($scope, SheetItems, $stateParams) {
+  function ($scope, SheetItems, $stateParams, $http) {
 
     $scope.id = $stateParams.marketID;
+
+    var splitFarmers = function(farmers){
+      famersArray = farmers.split(",");
+      return farmersArray;
+    };
+
+    $scope.spliting = splitFarmers;
 
     angular.extend($scope, {
                 westsac: {
@@ -59,6 +66,19 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
         });
       } 
   	});
+
+  }
+])
+.controller('MarketController', ['$scope', 'SheetItems', '$stateParams',
+  function ($scope, SheetItems, $stateParams) {
+
+    $scope.id = $stateParams.marketID;
+
+    SheetItems.query(function(data) {
+      //data processing can happen here
+      $scope.markets = data;   
+      
+    });
 
   }
 ])
