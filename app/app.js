@@ -1,4 +1,4 @@
-angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-directive'])
+angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-directive','ngResource'])
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
@@ -69,8 +69,26 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
 
   }
 ])
-.controller('MarketController', ['$scope', 'SheetItems', '$stateParams',
-  function ($scope, SheetItems, $stateParams) {
+.controller('MarketController', ['$scope', 'SheetItems', '$stateParams', '$http', '$resource',
+  function ($scope, SheetItems, $stateParams, $http, $resource) {
+
+    $http.jsonp('http://localhost:5000/api/users/?callback=JSON_CALLBACK').success(function (data) {
+        console.log("BLOG pass");
+    $scope.farmers = data; // response data 
+    }).error(function (data) {
+        console.log("BLOG failed");
+    });
+
+    $scope.farmerInMarket = function(item, array){
+      console.log(item + array);
+      if (array.indexOf(item) > -1) {
+        console.log(true);
+        return true;
+      } else {
+        console.log(false);
+        return false;
+      }
+    }
 
     $scope.id = $stateParams.marketID;
 
@@ -84,8 +102,6 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
 ])
 .controller('FormController', ['$scope', 'leafletData',
   function ($scope, $stateParams, leafletData) {
-
-    $scope.hola = "homa mundo";
 
     angular.extend($scope, {
                 westsac: {

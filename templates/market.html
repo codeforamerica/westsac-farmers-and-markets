@@ -34,8 +34,10 @@
 </div>
        
 <ul>
-  <li ng-repeat="farmer in markets[id - 1].farmers.split(',')">{{farmer}}</li>
+  <li ng-repeat="farmer in farmers" ng-if="farmerInMarket(farmer.email, markets[id-1].farmers.split(','))">{{farmer.email}}</li> 
 </ul>
 
-<h2>data of farmers from api </h2>
-{{farmers}}
+
+
+
+
