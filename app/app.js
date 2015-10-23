@@ -27,8 +27,9 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
       templateUrl: 'templates/thanks.html'
     })
     .state('farmer', {
-      url: '/farmer',
-      templateUrl: 'templates/farmer.html'
+      url: '/farmer/:farmerId',
+      templateUrl: 'templates/farmer.html',
+      controller: 'FarmerController'
     });
 
   $urlRouterProvider.otherwise('/home');
@@ -80,7 +81,6 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
     });
 
     $scope.farmerInMarket = function(item, array){
-      console.log(item + array);
       if (array.indexOf(item) > -1) {
         console.log(true);
         return true;
@@ -96,6 +96,19 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
       //data processing can happen here
       $scope.markets = data;   
       
+    });
+
+  }
+])
+.controller('FarmerController', ['$scope', '$stateParams', '$http', '$resource',
+  function ($scope, $stateParams, $http, $resource) {
+    $scope.id = $stateParams.farmerId;
+
+    $http.jsonp('http://localhost:5000/api/users/' + $scope.id + '?callback=JSON_CALLBACK').success(function (data) {
+        console.log("BLOG pass");
+    $scope.farmer = data; // response data 
+    }).error(function (data) {
+        console.log("BLOG failed");
     });
 
   }

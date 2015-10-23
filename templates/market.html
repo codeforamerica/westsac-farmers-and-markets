@@ -34,7 +34,7 @@
 </div>
        
 <ul>
-  <li ng-repeat="farmer in farmers" ng-if="farmerInMarket(farmer.email, markets[id-1].farmers.split(','))">{{farmer.email}}</li> 
+  <li ng-repeat="farmer in farmers" ng-if="farmerInMarket(farmer.email, markets[id-1].farmers.split(','))" ui-sref="farmer({ farmerId: farmer.id})">{{farmer.email}} - {{farmer.location}} - id: {{farmer.id}}</li> 
 </ul>
 
 
