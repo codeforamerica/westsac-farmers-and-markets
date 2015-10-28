@@ -73,7 +73,7 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
 .controller('MarketController', ['$scope', 'SheetItems', '$stateParams', '$http', '$resource',
   function ($scope, SheetItems, $stateParams, $http, $resource) {
 
-    $http.jsonp('http://localhost:5000/api/users/?callback=JSON_CALLBACK').success(function (data) {
+    $http.jsonp('http://westsac-farmstand.herokuapp.com/api/users/?callback=JSON_CALLBACK').success(function (data) {
         console.log("BLOG pass");
     $scope.farmers = data; // response data 
     }).error(function (data) {
@@ -104,7 +104,7 @@ angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-d
   function ($scope, $stateParams, $http, $resource) {
     $scope.id = $stateParams.farmerId;
 
-    $http.jsonp('http://localhost:5000/api/users/' + $scope.id + '?callback=JSON_CALLBACK').success(function (data) {
+    $http.jsonp('http://westsac-farmstand.herokuapp.com/api/users/' + $scope.id + '?callback=JSON_CALLBACK').success(function (data) {
         console.log("BLOG pass");
     $scope.farmer = data; // response data 
     }).error(function (data) {

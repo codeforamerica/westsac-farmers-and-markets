@@ -32,7 +32,7 @@ body {font-family: 'Lora', serif;}
   border-bottom: 1px solid #e5e5e1;}
 
 .search-results>li:first-child {
-  border-top: 1px solid #e5e5e1;
+  border-bottom: 1px solid #e5e5e1;
   padding-top: 15px;}
 
 .search-result-title {
