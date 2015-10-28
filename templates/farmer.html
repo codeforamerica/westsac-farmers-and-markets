@@ -1,28 +1,37 @@
 
-        
+     
+<div class="container-fluid result-farmers">
+  <div class="container">
+    
+    <h1>{{ farmer.farm_name }}</h1>
 
-        <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s320x320/e15/11410456_1054296967922095_1114136858_n.jpg" alt="" />
+    <h3>{{ farmer.name }}</h3>
 
-        {{farmer}} {{id}}
+    <p>{{ farmer.about_me }}</p>
 
-        <h3>{{ farmer.email }}</h3>
-        <p > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <p> <i class="fa fa-map-marker"></i> 123 Main Street, West Sacramento <br>
-        <i class="fa fa-phone"></i> 555-113-4498 </p>
-      
+    <p> <i class="fa fa-envelope" ng-show="{{ farmer.email }}"></i> {{ farmer.email }}<br>
+            
+    <i class="fa fa-phone" ng-show="{{ farmer.phone }}"></i> {{ farmer.phone }} <br>
 
-          <h3>Products</h3>
-          <hr>
-        
-          <div ng-repeat="product in farmer.products">
-            <!-- <img src="http://placehold.it/433x250"> -->
-                <div class="card-section">
-                <h3>{{ product.name }}</h3>
+    </p>
+          
+  <div class="product-wrapper" ng-show="{{ farmer.products }}">
+        <h3>Products</h3>
+
+        <hr>
                 
-          </div>
+        <div ng-repeat="product in farmer.products">
+        <!-- <img src="http://placehold.it/433x250"> -->
+          <div class="card-section">
 
+            <h3>{{ product.name }}</h3>
+                          
+          </div>  
+        </div>
+  </div>
 
-                
+</div>
+
                 
                 
 

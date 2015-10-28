@@ -32,10 +32,18 @@
   
     </div>
 </div>
+
+<div class="container-fluid result-farmers">
+  <div class="container">
+    
+    <ul>
+      <li ng-repeat="farmer in farmers" ng-if="farmerInMarket(farmer.email, markets[id-1].farmers.split(','))" ui-sref="farmer({ farmerId: farmer.id})">{{farmer.name}}</li> 
+    </ul>
+
+  
+    </div>
+</div>
        
-<ul>
-  <li ng-repeat="farmer in farmers" ng-if="farmerInMarket(farmer.email, markets[id-1].farmers.split(','))" ui-sref="farmer({ farmerId: farmer.id})">{{farmer.email}} - {{farmer.location}} - id: {{farmer.id}}</li> 
-</ul>
 
 
 
