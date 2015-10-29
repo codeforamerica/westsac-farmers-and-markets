@@ -1,9 +1,15 @@
-<div class="container">
+<div class="container add-market">
 
-	<form action="https://docs.google.com/a/codeforamerica.org/forms/d/1_Qsu-iSWFo_3supmJqIIM1zqzrIW0WKwAgDg3VdkHQc/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
-
+  <h2>Add a Market</h2>
+  <p>Add information about a market, farm, or farm stand that is a source of local food in Sacramento.</p>
+  
+  
+<form action="https://docs.google.com/a/codeforamerica.org/forms/d/1_Qsu-iSWFo_3supmJqIIM1zqzrIW0WKwAgDg3VdkHQc/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+  
 		<div class="form-group">
+      <p><strong>What type of market is it?</strong></p>
 			<ul role="radiogroup" aria-label="category  ">
+        
 				<li>
 					<label>
 						<input type="radio" name="entry.1231740091" 	value="Urban Farm" id="group_1231740091_1" role="radio" class="ss-q-radio" aria-label="Urban Farm">
@@ -26,71 +32,72 @@
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1861515584">title</label>
+			<label for="entry_1861515584">Title</label>
 			<input type="text" name="entry.1861515584" value="" class="form-control" id="entry_1861515584" dir="auto" aria-label="title  " title="">
 		</div>
 
 
 		<div class="form-group">
-			<label for="entry_2125513036">description</label>
+			<label for="entry_2125513036">Description</label>
 			<textarea name="entry.2125513036" rows="8" cols="0" class="form-control" id="entry_2125513036" dir="auto" aria-label="description  "></textarea>
 		</div>
 
 		<div class="form-group">
-			<label for="entry_84306259">address</label>
+			<label for="entry_84306259">Address</label>
 			<input type="text" name="entry.84306259" value="" class="form-control" id="entry_84306259" dir="auto" aria-label="address  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1559662300">city</label>
+			<label for="entry_1559662300">City</label>
 			<input type="text" name="entry.1559662300" value="" class="form-control" id="entry_1559662300" dir="auto" aria-label="city  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_239834816">state</label>
+			<label for="entry_239834816">State</label>
 			<input type="text" name="entry.239834816" value="" class="form-control" id="entry_239834816" dir="auto" aria-label="state  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1662777272">zipcode</label>
+			<label for="entry_1662777272">Zipcode</label>
 			<input type="text" name="entry.1662777272" value="" class="form-control" id="entry_1662777272" dir="auto" aria-label="zipcode  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1177582444">organizer</label>
+			<label for="entry_1177582444">Organizer's Name</label>
 			<input type="text" name="entry.1177582444" value="" class="form-control" id="entry_1177582444" dir="auto" aria-label="organizer  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1392941388">email</label>
+			<label for="entry_1392941388">Organizer's E-mail</label>
 			<input type="text" name="entry.1392941388" value="" class="form-control" id="entry_1392941388" dir="auto" aria-label="email  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_891570556">phone</label>
+			<label for="entry_891570556">Phone Number</label>
 			<input type="text" name="entry.891570556" value="" class="form-control" id="entry_891570556" dir="auto" aria-label="phone  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1614671811">opentimes</label>
+			<label for="entry_1614671811">What days and times are the market open? (i.e. "Sundays 1pm - 3pm")</label>
 			<input type="text" name="entry.1614671811" value="" class="form-control" id="entry_1614671811" dir="auto" aria-label="opentimes  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_829258381">website</label>
+			<label for="entry_829258381">Website Link</label>
 			<input type="text" name="entry.829258381" value="" class="form-control" id="entry_829258381" dir="auto" aria-label="website  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1523444650">ebtcard</label>
+			<label for="entry_1523444650">Does the market accept EBT Card?</label>
 			<input type="text" name="entry.1523444650" value="" class="form-control" id="entry_1523444650" dir="auto" aria-label="ebtcard  " title="">
 		</div>
 
 		<div class="form-group">
-			<label for="entry_1232855812">ccard</label>
+			<label for="entry_1232855812">Does the market accept credit card?</label>
 			<input type="text" name="entry.1232855812" value="" class="form-control" id="entry_1232855812" dir="auto" aria-label="ccard  " title="">
 		</div>
 
+    <p><strong>Select the point on the map of the market's location:</strong></p>
 		<leaflet markers="markers" center="westsac" lf-center="center" event-broadcast="events" width="100%" height="500"></leaflet>
 
 		<div class="form-group">
