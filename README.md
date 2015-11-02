@@ -79,3 +79,16 @@ To add a market:
 ### To Edit a Market
 To edit some market you just have to go to the [google sheet](https://docs.google.com/spreadsheets/d/1kjoos8G2ON6hnkskgEg5RL95PQk-kPNNq7MB2N0NyfI/edit#gid=1297961578) and edit the corresponding cell. That you can edit depends on the permissions on the corresponding google sheets. That the document is public don't necessarily means you can do changes.  
 
+### Adding Farmers to a Market
+
+To add farmers to a Market the user just have to go to the [google sheet](https://docs.google.com/spreadsheets/d/1kjoos8G2ON6hnkskgEg5RL95PQk-kPNNq7MB2N0NyfI/edit#gid=1297961578) and add the farmers in the column named *farmers*. The format is just emails separated by ','.
+
+```
+farmer1@gmail.com, farmer2@gmail.com, farmer3@gmail.com
+```
+If is necessary to delete a farmer just avoid to leave two colons in place .
+
+```
+//warning: don't do this
+farmer1@gmail.com, , farmer3@gmail.com
+```
