@@ -22,6 +22,35 @@ To get started is pretty seamless. Just clone the repo, cd into the repo directo
 	$ python -m SimpleHTTPServer
 ```
 
+## Using the Api from [Farmers](https://github.com/codeforamerica/westsac-farm-stand)
+
+If the developer try to inject the data directly it will have problems with CORS. In our case we inject *ngResource* in our app and use *jsonp* to get the data. 
+
+```javascript
+angular.module('marketsApp', ['ui.bootstrap','ui.router','nemLogging','leaflet-directive','ngResource'])
+
+.controller('MarketController', ['$scope', 'SheetItems', '$stateParams', '$http', '$resource',
+  function ($scope, SheetItems, $stateParams, $http, $resource) {
+
+    $http.jsonp('http://westsac-farmstand.herokuapp.com/api/users/?callback=JSON_CALLBACK').success(function (data) {
+        console.log("BLOG pass");
+    $scope.farmers = data; // response data 
+    }).error(function (data) {
+        console.log("BLOG failed");
+    });
+
+    $scope.farmerInMarket = function(item, array){
+      if (array.indexOf(item) > -1) {
+        console.log(true);
+        return true;
+      } else {
+        console.log(false);
+        return false;
+      }
+    }
+ );
+ ```
+This will connect you to the api and you are ready to go.
 
 How to use it?
 --------------
